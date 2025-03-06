@@ -1,6 +1,8 @@
-# Opdracht 3 - Namenlijst in Java
+# Opdracht 3 - Meedere namen invoeren 
 
-In deze opdracht gaan we een programma schrijven dat de gebruiker vraagt om namen in te voeren en ze vervolgens weergeeft. Je hebt al een IntelliJ-project gemaakt in de vorige opdracht. Nu ga je een derde class aanmaken en stap voor stap ontdekken hoe de code werkt.
+In deze opdracht gaan we een programma schrijven waarin de gebruiker **drie namen** invoert en deze vervolgens worden weergegeven.
+
+Later leer je hoe je dit makkelijker kunt maken met behulp van een lus en **loops**.
 
 ---
 
@@ -8,77 +10,20 @@ In deze opdracht gaan we een programma schrijven dat de gebruiker vraagt om name
 1. Open je bestaande Java-project in **IntelliJ IDEA**.
 2. Ga in de **Project View** naar de `src` map.
 3. Klik met de **rechtermuisknop** op `src` → **New** → **Java Class**.
-4. Geef de class de naam `Opdracht3` en druk op **Enter**.
+4. Geef de class de naam `Opdracht3NoLoop` en druk op **Enter**.
 
 Nu heb je een lege Java-class. De volgende stap is om er code in te schrijven.
 
 ---
 
-## **Stap 2: Werken met Arrays en Loops**
+## **Stap 2: Code schrijven**
 
-In deze opdracht gaan we:
-- **Meerdere namen opslaan** in een **array**.
-- **Een for-loop gebruiken** om de gebruiker meerdere keren om invoer te vragen.
-- **De namen weergeven** met een tweede loop.
-
-### **1. Hoe sla je meerdere waarden op?**
-Je kunt een **array** gebruiken om meerdere waarden van hetzelfde type op te slaan.
-
-```java
-String[] namen = new String[3]; // Een array die 3 namen kan opslaan
-```
-
-<details>
-  <summary>💡 Klik hier voor meer uitleg</summary>
-  - Arrays zijn lijsten van variabelen van hetzelfde type.
-  - `new String[3]` betekent dat we **een array maken** die **drie** namen kan opslaan.
-  - Elk element in de array heeft een **index**: `namen[0]`, `namen[1]`, `namen[2]`.
-</details>
-
-### **2. Hoe vraag je de gebruiker om meerdere invoeren?**
-We gebruiken een **for-loop** om **drie keer** de gebruiker om een naam te vragen.
-
-```java
-for (int i = 0; i < 3; i++) {
-    System.out.print("Voer naam " + (i + 1) + " in: ");
-    namen[i] = scanner.nextLine();
-}
-```
-
-<details>
-  <summary>💡 Klik hier voor meer uitleg</summary>
-  - `for (int i = 0; i < 3; i++)` zorgt ervoor dat de code **drie keer** wordt uitgevoerd.
-  - `System.out.print("Voer naam " + (i + 1) + " in: ");` toont een vraag aan de gebruiker.
-  - `namen[i] = scanner.nextLine();` slaat de ingevoerde naam op in de array.
-</details>
-
-### **3. Hoe toon je de ingevoerde namen?**
-We gebruiken een **enhanced for-loop** om alle namen weer te geven.
-
-```java
-for (String naam : namen) {
-    System.out.println("Naam: " + naam);
-}
-```
-
-<details>
-  <summary>💡 Klik hier voor meer uitleg</summary>
-  - `for (String naam : namen)` betekent **loop door elk element in de array**.
-  - `System.out.println("Naam: " + naam);` print elke naam op een nieuwe regel.
-</details>
-
-Nu we dit begrijpen, kunnen we de code schrijven!
-
----
-
-## **Stap 3: Code schrijven**
-
-Schrijf een programma dat de gebruiker vraagt om drie namen in te voeren en ze daarna toont.
+Schrijf een programma waarin de gebruiker **drie namen** invoert en deze vervolgens worden weergegeven.
 
 ➡️ **Denk eerst na:**
-- Hoe maak je een array aan?
-- Hoe vraag je de gebruiker om input met een loop?
-- Hoe toon je de gegevens op het scherm?
+- Hoe vraag je drie keer een invoer aan de gebruiker?
+- Hoe sla je deze namen op in aparte variabelen?
+- Hoe toon je elke naam apart op het scherm?
 
 <details>
   <summary>💡 Klik hier voor de oplossing</summary>
@@ -86,19 +31,23 @@ Schrijf een programma dat de gebruiker vraagt om drie namen in te voeren en ze d
 ```java
 import java.util.Scanner;
 
-public class Opdracht3 {
+public class Opdracht3NoLoop {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String[] namen = new String[3];
         
-        for (int i = 0; i < 3; i++) {
-            System.out.print("Voer naam " + (i + 1) + " in: ");
-            namen[i] = scanner.nextLine();
-        }
+        System.out.print("Voer de eerste naam in: ");
+        String naam1 = scanner.nextLine();
         
-        for (String naam : namen) {
-            System.out.println("Naam: " + naam);
-        }
+        System.out.print("Voer de tweede naam in: ");
+        String naam2 = scanner.nextLine();
+        
+        System.out.print("Voer de derde naam in: ");
+        String naam3 = scanner.nextLine();
+        
+        System.out.println("De ingevoerde namen zijn:");
+        System.out.println("1: " + naam1);
+        System.out.println("2: " + naam2);
+        System.out.println("3: " + naam3);
     }
 }
 ```
@@ -106,28 +55,29 @@ public class Opdracht3 {
 
 ---
 
-## **Stap 4: Het programma uitvoeren**
-1. Klik op de groene **play-knop** naast `main` in `Opdracht3.java`.
-2. Voer in de console drie namen in (bijvoorbeeld `Alice`, `Bob` en `Charlie`).
+## **Stap 3: Het programma uitvoeren**
+1. Klik op de groene **play-knop** naast `main` in `Opdracht3NoLoop.java`.
+2. Voer drie namen in wanneer daarom wordt gevraagd.
 3. Je ziet de uitvoer:
    ```
-   Voer naam 1 in: Alice
-   Voer naam 2 in: Bob
-   Voer naam 3 in: Charlie
-   Naam: Alice
-   Naam: Bob
-   Naam: Charlie
+   Voer de eerste naam in: Alice
+   Voer de tweede naam in: Bob
+   Voer de derde naam in: Charlie
+   De ingevoerde namen zijn:
+   1: Alice
+   2: Bob
+   3: Charlie
    ```
+
+---
+
+## **Stap 4: Hoe kan dit makkelijker?**
+Het bovenstaande programma werkt prima, maar het wordt al snel onhandig als je bijvoorbeeld **tien** namen wilt invoeren. Je moet dan 10 variabelen aanmaken.
+
+Een betere manier om dit te doen, is met een **array**. In een volgende opdracht leer je hoe je dit kunt automatiseren met een array.
 
 ---
 
 ## **Stap 5: Uitdagingen**
 Probeer nu zelf de volgende aanpassingen te maken:
-- Laat de gebruiker **vijf** namen invoeren in plaats van drie.
-- Toon de namen in **omgekeerde volgorde**.
-- Controleer of de gebruiker iets heeft ingevuld en geef een foutmelding als de invoer leeg is.
-
-Test je aanpassingen en kijk of je begrijpt hoe de uitvoer verandert.
-
-Veel succes! 🚀
-
+- Voeg een **vierde naam** toe en toon deze ook.
