@@ -1,4 +1,4 @@
-# Java Project Opstarten en Eerste Applicatie
+# Java Project Opstarten en je eerste applicatie
 
 ## **Stap 1: IntelliJ IDEA Installeren**
 1. Download en installeer [IntelliJ IDEA](https://www.jetbrains.com/idea/download/).
