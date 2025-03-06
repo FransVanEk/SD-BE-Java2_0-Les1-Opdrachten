@@ -1,4 +1,4 @@
-# Opdracht 3 - Meedere namen invoeren 
+# Opdracht 3 - Meerdere namen invoeren 
 
 In deze opdracht gaan we een programma schrijven waarin de gebruiker **drie namen** invoert en deze vervolgens worden weergegeven.
 

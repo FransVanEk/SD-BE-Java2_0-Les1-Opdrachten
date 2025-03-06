@@ -91,34 +91,42 @@ Met een **for-loop** kunnen we herhaling voorkomen:
 import java.util.Scanner;
 
 public class Opdracht5MetMethodes {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String[][] gegevens = new String[3][2];
-        
-        for (int i = 0; i < gegevens.length; i++) {
-            gegevens[i] = vraagGegevens(scanner, i + 1);
-        }
-        
-        toonGegevens(gegevens);
-    }
+   public static void main(String[] args) {
+      Scanner scanner = new Scanner(System.in);
+      String[][] gegevens = new String[3][2]; // Een 3x2 array voor namen en huisdieren (3 personen en 2 gegevens per persoon :  naam en huisdier)
 
-    public static String[] vraagGegevens(Scanner scanner, int nummer) {
-        String[] persoon = new String[2];
-        System.out.print("Voer de naam van persoon " + nummer + " in: ");
-        persoon[0] = scanner.nextLine();
-        System.out.print("Voer het huisdier van persoon " + nummer + " in: ");
-        persoon[1] = scanner.nextLine();
-        return persoon;
-    }
+      // Loop om de gegevens van de gebruiker te verzamelen
+      for (int i = 0; i < gegevens.length; i++) {
+         gegevens[i] = vraagGegevens(scanner, i + 1);
+      }
 
-    public static void toonGegevens(String[][] gegevens) {
-        System.out.println("De ingevoerde namen en huisdieren zijn:");
-        for (int i = 0; i < gegevens.length; i++) {
-            System.out.println((i + 1) + ": " + gegevens[i][0] + " heeft een " + gegevens[i][1]);
-        }
-    }
+      // Methode om de gegevens weer te geven
+      toonGegevens(gegevens);
+   }
+
+   // Methode om de gebruiker om een naam en huisdier te vragen
+   public static String[] vraagGegevens(Scanner scanner, int nummer) {
+      String[] persoon = new String[2]; // Een array met twee elementen: naam en huisdier
+      System.out.print("Voer de naam van persoon " + nummer + " in: ");
+      persoon[0] = scanner.nextLine(); // Leest de naam van de gebruiker
+      System.out.print("Voer het huisdier van persoon " + nummer + " in: ");
+      persoon[1] = scanner.nextLine(); // Leest het huisdier van de gebruiker
+      return persoon; // Geeft de ingevulde array terug
+   }
+
+   // Methode om alle gegevens weer te geven
+   public static void toonGegevens(String[][] gegevens) {
+      System.out.println("De ingevoerde namen en huisdieren zijn:");
+      for (int i = 0; i < gegevens.length; i++) {
+         System.out.println((i + 1) + ": " + gegevens[i][0] + " heeft een " + gegevens[i][1]); // Print de naam en het huisdier
+      }
+   }
 }
 ```
 
 In de **volgende les** leer je hoe je **methodes** en **loops** gebruikt om herhaling in je code te verminderen en je programma flexibeler te maken! 🚀
+
+
+
+
 

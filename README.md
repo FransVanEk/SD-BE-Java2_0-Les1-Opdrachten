@@ -26,9 +26,9 @@ java-opdrachten/
 |------------------------------------|------------------------------------------------------|
 | [Opdracht 1](./src/Opdracht-01.md) | Print *"Hallo, wereld!"* op het scherm               |
 | [Opdracht 2](./src/Opdracht-02.md) | Vraag de gebruiker om twee getallen en toon de som   |
-| [Opdracht 3](./src/Opdracht-03.md) | Vraag de gebruiker om namen en print ze met een loop |
-| [Opdracht 4](./src/Opdracht-04.md) | Print alle even getallen tot een gekozen maximum     |
-| [Opdracht 5](./src/Opdracht-05.md) | Geavanceerde opdracht met loops en berekeningen      |
+| [Opdracht 3](./src/Opdracht-03.md) | Vraag de gebruiker om namen en print ze              |
+| [Opdracht 4](./src/Opdracht-04.md) | Vraag de gebruiker om namen en print ze d.m.v. array |
+| [Opdracht 5](./src/Opdracht-05.md) | Vraag de gebruiker om namen en huisdieren            |
 
 Veel succes met de opdrachten!
 
