@@ -38,7 +38,7 @@ Schrijf een programma dat een gebruiker vraagt om het aantal Fibonacci-getallen 
 ➡️ **Denk eerst na:**
 - Hoe vraag je de gebruiker om invoer?
 - Hoe zorg je ervoor dat elk getal de som is van de vorige twee?
-- Hoe gebruik je een **while-loop** om de reeks te genereren?
+- Hoe gebruik je een **for-loop** om de reeks te genereren?
 
 ### **1. De gebruiker om invoer vragen**
 Hoe vraag je de gebruiker om een getal?
@@ -60,23 +60,22 @@ Welke variabelen hebben we nodig?
   <summary>💡 Klik hier voor de oplossing</summary>
 
 ```java
-int a = 0, b = 1, teller = 0;
+int a = 0, b = 1;
 ```
 </details>
 
-### **3. Een `while`-loop gebruiken om de reeks te genereren**
+### **3. Een `for`-loop gebruiken om de reeks te genereren**
 Hoe zorg je ervoor dat we het juiste aantal Fibonacci-getallen genereren?
 
 <details>
   <summary>💡 Klik hier voor de oplossing</summary>
 
 ```java
-while (teller < aantal) {
+for (int i = 0; i < aantal; i++) {
     System.out.println(a);
     int volgende = a + b;
     a = b;
     b = volgende;
-    teller++;
 }
 ```
 </details>
@@ -96,14 +95,13 @@ public class Opdracht5 {
         System.out.print("Voer het aantal Fibonacci-getallen in: ");
         int aantal = scanner.nextInt();
         
-        int a = 0, b = 1, teller = 0;
+        int a = 0, b = 1;
         
-        while (teller < aantal) {
+        for (int i = 0; i < aantal; i++) {
             System.out.println(a);
             int volgende = a + b;
             a = b;
             b = volgende;
-            teller++;
         }
     }
 }
@@ -140,5 +138,5 @@ Probeer nu zelf de volgende aanpassingen te maken:
 
 Test je aanpassingen en kijk of je begrijpt hoe de uitvoer verandert.
 
-Veel succes! 
+Veel succes! 🚀
 

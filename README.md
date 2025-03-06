@@ -8,7 +8,7 @@ java-opdrachten/
 │── src/
 │   ├── Opdracht-01.md
 │   ├── Opdracht-02.md
-│   ├── Opdracht-03.mden
+│   ├── Opdracht-03.md
 │   ├── Opdracht-04.md
 │   ├── Opdracht-05.md
 │── README.md
